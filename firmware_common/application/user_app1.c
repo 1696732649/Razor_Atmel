@@ -92,12 +92,14 @@ void UserApp1Initialize(void)
   if( 1 )
   {
     UserApp1_StateMachine = UserApp1SM_Idle;
+    LedOff(RED);
+    LedBlink(RED,LED_1HZ);
   }
-  else
-  {
+    else
+    {
     /* The task isn't properly initialized, so shut it down and don't run */
     UserApp1_StateMachine = UserApp1SM_Error;
-  }
+    }
 
 } /* end UserApp1Initialize() */
 
